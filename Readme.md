@@ -1,5 +1,6 @@
 Todos react Single Page App
 
+**Requirements:**
 - Back-end (NodeJS)
   • Each Todo item have the following properties:
    . ID
@@ -14,29 +15,68 @@ Todos react Single Page App
   • Each todos show the “Done” or “Pending state”.
   • Clicking on any item update it’s “Done or pending” state.
 
-- Demo
-  - //TODO
-
-- Getting Started
-  //TODO
+- **Getting Started**
+  # npm run dev
 
 - Directory Structure
- - //TODO
  - client (holds react)
- - config (holds db info)
- - middleware (authentication purposes)
- - models (schema information)
- - routes/api (holds backend APIs with Express framework)
+ - config (holds persistence and other configs)
+ - server (holds backend APIs with Express framework)
+
+Client
+src
+ ┣ common
+ ┃ ┣ reducers.js
+ ┃ ┗ store.js
+ ┣ modules
+ ┃ ┗ Todo
+ ┃ ┃ ┣ actions
+ ┃ ┃ ┃ ┣ todoActions.js
+ ┃ ┃ ┃ ┗ todoActionTypes.js
+ ┃ ┃ ┣ components
+ ┃ ┃ ┃ ┣ Todo.js
+ ┃ ┃ ┃ ┣ TodoAdd.js
+ ┃ ┃ ┃ ┣ TodoFilter.js
+ ┃ ┃ ┃ ┣ TodoFilterLink.js
+ ┃ ┃ ┃ ┣ TodoItem.js
+ ┃ ┃ ┃ ┗ TodoList.js
+ ┃ ┃ ┗ reducers
+ ┃ ┃ ┃ ┗ todoReducers.js
+ ┣ styles
+ ┃ ┣ bootstrap
+ ┃ ┣ img
+ ┃ ┃ ┗ background.png
+ ┃ ┣ styles.css
+ ┣ App.js
+ ┣ index.js
+Server
+ ┣ common
+ ┃ ┗ utils.js
+ ┣ config
+ ┃ ┣ data.json
+ ┃ ┣ dev.js
+ ┃ ┗ index.js
+ ┣ todo
+ ┃ ┣ index.js
+ ┃ ┗ todo.js
+ ┗ todo-app.js
+server.js
 
 - Features
- - //TODO
+ - List All Todos
+ - Add a Todo
+ - Check/Uncheck a todo
+ - Delete a Todo
+ - Filter All, Active, Completed
 
 - Libraries Used
  - //TODO
 
-- API Calls (//TODO endpoints to be updated later)
- 1. Get
- 2. POST
- 3. PUT
+- API Calls (// endpoints to be updated later)
+ 1. GET all todos --> /todo/
+ 2. Add --> /todo/new
+ 3. Toggle completed --> /todo/:todoId/toggle
+ 4. Delete --> /todo/:todoId/delete
+ 5. Get a todo with id --> /todo/:todoId
 
 Author : Gaurav Kaushik

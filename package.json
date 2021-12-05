@@ -6,16 +6,25 @@
   "scripts": {
     "start": "node server",
     "server": "nodemon server",
-    "client": "npm start --prefix client"
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "jest --runInBand ./test"
   },
-  "keywords": ["reactJS", "nodeJS"],
+  "keywords": [
+    "reactJS",
+    "nodeJS"
+  ],
   "author": "gauravkaushik",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
     "config": "^3.3.6",
     "express": "^4.17.1",
-    "express-validator": "^6.13.0",
-    "mongoose": "^6.0.14"
+    "express-ejs-layouts": "^2.5.1",
+    "express-minify": "^1.0.0",
+    "express-session": "^1.17.2",
+    "nanoid": "^3.1.30"
   },
   "devDependencies": {
     "concurrently": "^6.4.0",

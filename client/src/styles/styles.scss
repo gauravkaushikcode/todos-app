@@ -1,0 +1,34 @@
+@import "bootstrap";
+@import "fontawesome";
+@import "_variables.scss";
+
+body {
+    padding: 40px;
+    background: url('./img/bg.png');
+}
+
+.table-todo {
+    tbody {
+        td:first-child {
+            padding-left: 15px;
+        }
+
+        td:last-child {
+            padding-right: 15px;
+        }
+    }
+}
+
+.text-lg {
+    font-size: 18px;
+}
+
+.loading {
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff no-repeat 50% 50%;
+}
