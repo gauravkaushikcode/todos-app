@@ -1,24 +1,30 @@
-Todos react Single Page App
 
-**Requirements:**
-- Back-end (NodeJS)
-  • Each Todo item have the following properties:
-   . ID
-   . Text
-   . Done or pending
+## Requirements:
+### Back-end (Express|NodeJS)
+  - Each Todo item have the following properties:
+    - ID
+    - Text
+    - Done or pending
 
-  • One endpoint to provide all the “to do” items to the front-end.
-  • Another endpoint can be used to update the “Done or pending” state of any to do item
+  - One endpoint to provide all the “to do” items to the front-end.
+  - Another endpoint can be used to update the “Done or pending” state of any to do item
 
-- Front-end (ReactJS)
-  • The application gets all the “to do” items from the back-end API and present it on the screen
-  • Each todos show the “Done” or “Pending state”.
-  • Clicking on any item update it’s “Done or pending” state.
+### Front-end (ReactJS)
+  - The application gets all the “to do” items from the back-end API and present it on the screen
+  - Each todos show the “Done” or “Pending state”.
+  - Clicking on any item update it’s “Done or pending” state.
 
-- **Getting Started**
-  # npm run dev
+## Getting Started
+>install plugins listed in package.json for client and server using following command
+  ```sh
+  npm install
+  ```
+  >run application locally port 5000 (server) and 3000 (client)
+```sh
+  npm run dev 
+  ```
 
-- Directory Structure
+## Directory Structure
  - client (holds react)
  - config (holds persistence and other configs)
  - server (holds backend APIs with Express framework)
@@ -62,21 +68,22 @@ Server
  ┗ todo-app.js
 server.js
 
-- Features
+## Features
  - List All Todos
  - Add a Todo
  - Check/Uncheck a todo
  - Delete a Todo
  - Filter All, Active, Completed
+## Libraries Used
+ - react, react-bootstrap, react-redux, redux, redux-thunk etc. (client)
+ - express, config, compression, nanoid etc. (server)
+ - mocha && chai (test)
 
-- Libraries Used
- - //TODO
+## API Calls (// endpoints to be updated later)
+ - GET all todos --> /todo/
+ - Add --> /todo/new
+ - Toggle completed --> /todo/:todoId/toggle
+ - Delete --> /todo/:todoId/delete
+ - Get a todo with id --> /todo/:todoId
 
-- API Calls (// endpoints to be updated later)
- 1. GET all todos --> /todo/
- 2. Add --> /todo/new
- 3. Toggle completed --> /todo/:todoId/toggle
- 4. Delete --> /todo/:todoId/delete
- 5. Get a todo with id --> /todo/:todoId
-
-Author : Gaurav Kaushik
+>Author : Gaurav Kaushik
