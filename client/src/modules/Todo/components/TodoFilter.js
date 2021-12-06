@@ -12,7 +12,7 @@ class TodoFilter extends React.Component {
       <div className="panel-footer small">
         Show:
         <TodoFilterLink type={TODO_FILTER_ALL}>All</TodoFilterLink>
-        <TodoFilterLink type={TODO_FILTER_ACTIVE}>Active</TodoFilterLink>
+        <TodoFilterLink type={TODO_FILTER_ACTIVE}>Pending</TodoFilterLink>
         <TodoFilterLink type={TODO_FILTER_COMPLETED}>Completed</TodoFilterLink>
       </div>
     );

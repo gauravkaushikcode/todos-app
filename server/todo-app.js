@@ -1,7 +1,7 @@
 // Environments
 // --------------------------------
-var envs = ["dev"];
-var env = process.env.NODE_ENV || "dev";
+const envs = ["dev"];
+const env = process.env.NODE_ENV || "dev";
 if (envs.indexOf(env) === -1) {
   console.error("Could not get env. Stopping...");
   return;
@@ -9,7 +9,7 @@ if (envs.indexOf(env) === -1) {
 
 // Configurations
 // --------------------------------
-var config = require("./config/" + env);
+const config = require("./config/" + env);
 
 // Main app
 // --------------------------------
@@ -37,7 +37,7 @@ app.use(
 
 // EJS layout plugin
 // --------------------------------
-var expressLayouts = require("express-ejs-layouts");
+const expressLayouts = require("express-ejs-layouts");
 app.use(expressLayouts);
 
 // Exports
