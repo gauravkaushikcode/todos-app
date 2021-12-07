@@ -3,38 +3,38 @@ const fs = require("fs");
 const path = require("path");
 const { nanoid } = require("nanoid");
 
-var getTodos = () => {
+const getTodos = () => {
   try {
-    var data = fs.readFileSync(path.resolve(__dirname, "data.json"));
+    const data = fs.readFileSync(path.resolve(__dirname, "data.json"));
     return JSON.parse(data);
   } catch (e) {
     return [];
   }
 };
 
-var getTodoWithId = (id) => {
-  var todos = getTodos();
+const getTodoWithId = (id) => {
+  const todos = getTodos();
   return todos.filter((todo) => todo.id == id);
 };
 
-var addTodo = (text) => {
-  var todos = getTodos();
-  var todo = { id: nanoid(), text: text, completed: false };
+const addTodo = (text) => {
+  const todos = getTodos();
+  const todo = { id: nanoid(), text: text, completed: false };
   // Adding the todo data to our todos
   todos.push(todo);
   saveTodos(todos);
   return todo;
 };
 
-var deleteTodo = (id) => {
+const deleteTodo = (id) => {
   const todos = getTodos();
-  var filteredtodos = todos.filter((todo) => todo.id !== id);
+  const filteredtodos = todos.filter((todo) => todo.id !== id);
   saveTodos(filteredtodos);
 };
 
-var toggleTodo = (id) => {
+const toggleTodo = (id) => {
   const todos = getTodos();
-  for (var i = 0; i < todos.length; i++) {
+  for (let i = 0; i < todos.length; i++) {
     if (todos[i].id === id) {
       todos[i].completed = !todos[i].completed;
     }
@@ -42,7 +42,7 @@ var toggleTodo = (id) => {
   saveTodos(todos);
 };
 
-var saveTodos = (todos) => {
+const saveTodos = (todos) => {
   // Writing to our JSON file
   fs.writeFile(
     path.resolve(__dirname, "data.json"),
